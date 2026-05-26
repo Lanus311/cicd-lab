@@ -1,0 +1,61 @@
+name: CI Lab
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+concurrency:
+  group: ci-lab-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: ['22']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript type check
+        run: npm run typecheck
+
+      - name: Prettier format check
+        run: npm run format:check
+      - name: Run tests (produce JUnit)
+        run: |
+          mkdir -p reports
+          npm test -- --reporter=junit --outputFile.junit=reports/vitest-junit.xml
+
+      - name: Upload test report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitest-junit
+          path: reports/vitest-junit.xml
+
+      - name: Publish test results to Checks
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: vitest
+          path: 'reports/vitest-junit.xml'
+          reporter: 'junit'
