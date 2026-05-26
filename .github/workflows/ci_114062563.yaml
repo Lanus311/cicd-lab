@@ -52,10 +52,10 @@ jobs:
           name: vitest-junit
           path: reports/vitest-junit.xml
 
-      - name: Publish test results to Checks
+      - name: Publish JUnit report to Checks
         if: always()
-        uses: dorny/test-reporter@v1
+        uses: r0adkll/upload-junit-report@v1
         with:
-          name: vitest
-          path: 'reports/vitest-junit.xml'
-          reporter: 'junit'
+          path: reports/vitest-junit.xml
+          check_name: vitest
+          fail_on_error: true
