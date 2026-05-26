@@ -1,4 +1,4 @@
-name: CI Lab
+name: CI 114062563
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: ci-lab-${{ github.workflow }}-${{ github.ref }}
+  group: ci-114062563-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -52,10 +52,9 @@ jobs:
           name: vitest-junit
           path: reports/vitest-junit.xml
 
-      - name: Publish JUnit report to Checks
+      - name: Upload test report to GitHub Test Reports
         if: always()
-        uses: r0adkll/upload-junit-report@v1
+        uses: actions/upload-test-report@v1
         with:
-          path: reports/vitest-junit.xml
-          check_name: vitest
-          fail_on_error: true
+          test-report-files: reports/vitest-junit.xml
+          test-run-name: vitest
