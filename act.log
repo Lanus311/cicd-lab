@@ -1,0 +1,658 @@
+time="2026-05-26T16:22:40Z" level=info msg="Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'"
+[Run Tests/test                ] ⭐ Run Set up job
+[Hello GitHub Actions/hello-job] ⭐ Run Set up job
+[Hello GitHub Actions/hello-job] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Run Tests/test                ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Hello GitHub Actions/hello-job]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[Hello GitHub Actions/hello-job] using DockerAuthConfig authentication for docker pull
+[Run Tests/test                ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[Run Tests/test                ] using DockerAuthConfig authentication for docker pull
+[Hello GitHub Actions/hello-job]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello GitHub Actions/hello-job]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Run Tests/test                ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello GitHub Actions/hello-job]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Hello GitHub Actions/hello-job]   ✅  Success - Set up job
+[Hello GitHub Actions/hello-job] ⭐ Run Main Checkout code
+[Hello GitHub Actions/hello-job]   🐳  docker cp src=/workspaces/cicd-lab/. dst=/workspaces/cicd-lab
+[Run Tests/test                ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello GitHub Actions/hello-job]   ✅  Success - Main Checkout code [219.841207ms]
+[Hello GitHub Actions/hello-job] ⭐ Run Main Hello world action step
+[Hello GitHub Actions/hello-job]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/1] user= workdir=
+[Hello GitHub Actions/hello-job]   | Hello World!
+[Hello GitHub Actions/hello-job]   ✅  Success - Main Hello world action step [158.91078ms]
+[Hello GitHub Actions/hello-job] ⭐ Run Main Show current directory
+[Hello GitHub Actions/hello-job]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[Run Tests/test                ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Hello GitHub Actions/hello-job]   | total 220
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 8 root root   4096 May 26 16:22 .
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 3 root root   4096 May 26 16:22 ..
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root     85 May 14 11:08 .actrc
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 3 root root   4096 May 26 16:22 .devcontainer
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root    365 May 14 11:08 .eslintrc.cjs
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 7 root root   4096 May 26 16:22 .git
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 3 root root   4096 May 26 16:22 .github
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root     53 May 14 11:08 .gitignore
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root     20 May 14 11:08 .prettierignore
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root     90 May 14 11:08 .prettierrc
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root    359 May 14 11:08 Dockerfile
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root   3758 May 14 11:08 README.md
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root   1888 May 26 16:22 act.log
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root    306 May 14 11:08 docker-compose.yml
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root 134528 May 14 11:11 package-lock.json
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root    909 May 14 11:08 package.json
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 2 root root   4096 May 26 16:22 snippets
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 2 root root   4096 May 26 16:22 src
+[Hello GitHub Actions/hello-job]   | drwxr-xr-x 2 root root   4096 May 26 16:22 test
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root  12119 May 14 11:08 tsconfig.json
+[Hello GitHub Actions/hello-job]   | -rw-rw-rw- 1 root root    254 May 14 11:08 vitest.config.ts
+[Hello GitHub Actions/hello-job]   ✅  Success - Main Show current directory [158.015494ms]
+[Hello GitHub Actions/hello-job] ⭐ Run Complete job
+[Hello GitHub Actions/hello-job] Cleaning up container for job hello-job
+[Run Tests/test                ]   ✅  Success - Set up job
+[Run Tests/test                ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v5
+[Hello GitHub Actions/hello-job]   ✅  Success - Complete job
+[Hello GitHub Actions/hello-job] 🏁  Job succeeded
+[ci/ci-1                       ] ⭐ Run Set up job
+[ci/ci-2                       ] ⭐ Run Set up job
+[ci/ci-2                       ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[ci/ci-1                       ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[ci/ci-2                       ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[ci/ci-2                       ] using DockerAuthConfig authentication for docker pull
+[ci/ci-1                       ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[ci/ci-1                       ] using DockerAuthConfig authentication for docker pull
+[Run Tests/test                ] Non-terminating error while running 'git clone': some refs were not updated
+[Run Tests/test                ]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v7
+[ci/ci-1                       ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[ci/ci-2                       ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[ci/ci-1                       ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[ci/ci-2                       ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Run Tests/test                ] ⭐ Run Main Checkout code
+[Run Tests/test                ]   🐳  docker cp src=/workspaces/cicd-lab/. dst=/workspaces/cicd-lab
+[Run Tests/test                ]   ✅  Success - Main Checkout code [119.272111ms]
+[Run Tests/test                ] ⭐ Run Main Setup Node.js
+[Run Tests/test                ]   🐳  docker cp src=/home/node/.cache/act/actions-setup-node@v5/ dst=/var/run/act/actions/actions-setup-node@v5/
+[ci/ci-1                       ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[ci/ci-2                       ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[ci/ci-1                       ]   ✅  Success - Set up job
+[ci/ci-1                       ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v5
+[ci/ci-2                       ]   ✅  Success - Set up job
+[ci/ci-2                       ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v5
+[ci/ci-1                       ] Non-terminating error while running 'git clone': some refs were not updated
+[ci/ci-1                       ] 🧪  Matrix: map[node-version:22]
+[ci/ci-1                       ] ⭐ Run Main Checkout
+[ci/ci-1                       ]   🐳  docker cp src=/workspaces/cicd-lab/. dst=/workspaces/cicd-lab
+[ci/ci-1                       ]   ✅  Success - Main Checkout [73.240591ms]
+[ci/ci-1                       ] ⭐ Run Main Setup Node.js
+[Run Tests/test                ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/setup/index.js] user= workdir=
+[ci/ci-1                       ]   🐳  docker cp src=/home/node/.cache/act/actions-setup-node@v5/ dst=/var/run/act/actions/actions-setup-node@v5/
+[Run Tests/test                ]   | Found in cache @ /opt/hostedtoolcache/node/22.22.3/x64
+[Run Tests/test                ]   ❓  ::group::Environment details
+[Run Tests/test                ]   | (node:30) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[Run Tests/test                ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[Run Tests/test                ]   | node: v22.22.3
+[Run Tests/test                ]   | npm: 10.9.8
+[Run Tests/test                ]   | yarn: 
+[Run Tests/test                ]   ❓  ::endgroup::
+[Run Tests/test                ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/tsc.json
+[Run Tests/test                ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-stylish.json
+[Run Tests/test                ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-compact.json
+[Run Tests/test                ]   ✅  Success - Main Setup Node.js [2.136484655s]
+[Run Tests/test                ]   ⚙  ::set-output:: node-version=v22.22.3
+[Run Tests/test                ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/22.22.3/x64/bin
+[Run Tests/test                ] ⭐ Run Main Install dependencies
+[Run Tests/test                ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[ci/ci-1                       ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/setup/index.js] user= workdir=
+[ci/ci-2                       ] Non-terminating error while running 'git clone': some refs were not updated
+[ci/ci-2                       ] 🧪  Matrix: map[node-version:24]
+[ci/ci-2                       ] ⭐ Run Main Checkout
+[ci/ci-2                       ]   🐳  docker cp src=/workspaces/cicd-lab/. dst=/workspaces/cicd-lab
+[ci/ci-2                       ]   ✅  Success - Main Checkout [137.438697ms]
+[ci/ci-2                       ] ⭐ Run Main Setup Node.js
+[ci/ci-2                       ]   🐳  docker cp src=/home/node/.cache/act/actions-setup-node@v5/ dst=/var/run/act/actions/actions-setup-node@v5/
+[ci/ci-1                       ]   | Found in cache @ /opt/hostedtoolcache/node/22.22.3/x64
+[ci/ci-1                       ]   | (node:31) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[ci/ci-1                       ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[ci/ci-1                       ]   ❓  ::group::Environment details
+[ci/ci-1                       ]   | node: v22.22.3
+[ci/ci-1                       ]   | npm: 10.9.8
+[ci/ci-1                       ]   | yarn: 
+[ci/ci-1                       ]   ❓  ::endgroup::
+[ci/ci-1                       ]   | [command]/opt/hostedtoolcache/node/22.22.3/x64/bin/npm config get cache
+[ci/ci-1                       ]   | /root/.npm
+[ci/ci-1                       ]   ⚙  ***
+[ci/ci-2                       ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/setup/index.js] user= workdir=
+[ci/ci-2                       ]   | Found in cache @ /opt/hostedtoolcache/node/24.15.0/x64
+[ci/ci-2                       ]   ❓  ::group::Environment details
+[ci/ci-2                       ]   | (node:32) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[ci/ci-2                       ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[ci/ci-1                       ]   | Cache Size: ~43 MB (45218326 B)
+[ci/ci-1                       ]   | [command]/usr/bin/tar -xf /tmp/f9f04120-fc7f-42be-b017-d233da6bfd58/cache.tzst -P -C /workspaces/cicd-lab --use-compress-program unzstd
+[Run Tests/test                ]   | npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[ci/ci-2                       ]   | node: v24.15.0
+[ci/ci-2                       ]   | npm: 11.12.1
+[ci/ci-2                       ]   | yarn: 
+[ci/ci-2                       ]   ❓  ::endgroup::
+[ci/ci-2                       ]   | [command]/opt/hostedtoolcache/node/24.15.0/x64/bin/npm config get cache
+[Run Tests/test                ]   | npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[Run Tests/test                ]   | npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[Run Tests/test                ]   | npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[Run Tests/test                ]   | npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[ci/ci-1                       ]   | Cache restored successfully
+[ci/ci-1                       ]   | Cache restored from key: node-cache-linux-x64-npm-59a0006d34d2a202efa173b36afa9ce7b5184423dee6684b10acf6213002aa75
+[ci/ci-1                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/tsc.json
+[ci/ci-1                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-stylish.json
+[ci/ci-1                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-compact.json
+[ci/ci-1                       ]   ✅  Success - Main Setup Node.js [6.394873469s]
+[ci/ci-1                       ]   ⚙  ::set-output:: node-version=v22.22.3
+[ci/ci-1                       ]   ⚙  ::set-output:: cache-hit=true
+[ci/ci-1                       ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/22.22.3/x64/bin
+[ci/ci-1                       ] ⭐ Run Main Install dependencies
+[ci/ci-1                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[ci/ci-2                       ]   | /root/.npm
+[ci/ci-2                       ]   ⚙  ***
+[ci/ci-2                       ]   | Cache Size: ~43 MB (45218326 B)
+[ci/ci-2                       ]   | [command]/usr/bin/tar -xf /tmp/3b3bbc9f-929c-4a1f-bc8f-12e4729767c1/cache.tzst -P -C /workspaces/cicd-lab --use-compress-program unzstd
+[ci/ci-2                       ]   | Cache restored successfully
+[ci/ci-2                       ]   | Cache restored from key: node-cache-linux-x64-npm-59a0006d34d2a202efa173b36afa9ce7b5184423dee6684b10acf6213002aa75
+[ci/ci-2                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/tsc.json
+[ci/ci-2                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-stylish.json
+[ci/ci-2                       ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-compact.json
+[ci/ci-2                       ]   ✅  Success - Main Setup Node.js [6.574827515s]
+[ci/ci-2                       ]   ⚙  ::set-output:: node-version=v24.15.0
+[ci/ci-2                       ]   ⚙  ::set-output:: cache-hit=true
+[ci/ci-2                       ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/24.15.0/x64/bin
+[ci/ci-2                       ] ⭐ Run Main Install dependencies
+[ci/ci-2                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[ci/ci-1                       ]   | npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[ci/ci-1                       ]   | npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[ci/ci-1                       ]   | npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[ci/ci-1                       ]   | npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[ci/ci-1                       ]   | npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[Run Tests/test                ]   | npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | added 228 packages, and audited 229 packages in 17s
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | 75 packages are looking for funding
+[Run Tests/test                ]   |   run `npm fund` for details
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | 2 vulnerabilities (1 moderate, 1 high)
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | To address all issues, run:
+[Run Tests/test                ]   |   npm audit fix
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | Run `npm audit` for details.
+[Run Tests/test                ]   ✅  Success - Main Install dependencies [17.704633246s]
+[Run Tests/test                ] ⭐ Run Main Run tests
+[Run Tests/test                ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=
+[ci/ci-2                       ]   | npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[ci/ci-2                       ]   | npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[ci/ci-2                       ]   | npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[ci/ci-2                       ]   | npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[ci/ci-2                       ]   | npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[ci/ci-1                       ]   | npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | > my-app@1.0.0 test
+[Run Tests/test                ]   | > vitest run --reporter=default --reporter=junit --outputFile.junit=reports/vitest-junit.xml
+[Run Tests/test                ]   | 
+[ci/ci-1                       ]   | 
+[ci/ci-1                       ]   | added 228 packages, and audited 229 packages in 15s
+[ci/ci-1                       ]   | 
+[ci/ci-1                       ]   | 75 packages are looking for funding
+[ci/ci-1                       ]   |   run `npm fund` for details
+[ci/ci-1                       ]   | 
+[ci/ci-1                       ]   | 2 vulnerabilities (1 moderate, 1 high)
+[ci/ci-1                       ]   | 
+[ci/ci-1                       ]   | To address all issues, run:
+[ci/ci-1                       ]   |   npm audit fix
+[ci/ci-1                       ]   | 
+[ci/ci-1                       ]   | Run `npm audit` for details.
+[ci/ci-1                       ]   ✅  Success - Main Install dependencies [15.766715767s]
+[ci/ci-1                       ] ⭐ Run Main Compute image tag
+[ci/ci-1                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/meta] user= workdir=
+[ci/ci-2                       ]   | npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | [1m[30m[46m RUN [49m[39m[22m [36mv4.1.5 [39m[90m/workspaces/cicd-lab[39m
+[Run Tests/test                ]   | 
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | added 228 packages, and audited 229 packages in 16s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | 75 packages are looking for funding
+[ci/ci-2                       ]   |   run `npm fund` for details
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | 2 vulnerabilities (1 moderate, 1 high)
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | To address all issues, run:
+[ci/ci-2                       ]   |   npm audit fix
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | Run `npm audit` for details.
+[ci/ci-2                       ]   ✅  Success - Main Install dependencies [16.319495683s]
+[ci/ci-2                       ] ⭐ Run Main Compute image tag
+[ci/ci-2                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/meta] user= workdir=
+[ci/ci-1                       ]   ✅  Success - Main Compute image tag [3.098338402s]
+[ci/ci-1                       ]   ⚙  ::set-output:: branch_name=release/1.0.0
+[ci/ci-1                       ]   ⚙  ::set-output:: image_tag=release-1.0.0
+[ci/ci-1                       ] ⭐ Run Main Print image metadata
+[ci/ci-2                       ]   ✅  Success - Main Compute image tag [493.568233ms]
+[ci/ci-2                       ]   ⚙  ::set-output:: branch_name=release/1.0.0
+[ci/ci-2                       ]   ⚙  ::set-output:: image_tag=release-1.0.0
+[ci/ci-1                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=
+[ci/ci-2                       ] ⭐ Run Main Print image metadata
+[ci/ci-1                       ]   | Node version: 22
+[ci/ci-1                       ]   | Branch: release/1.0.0
+[ci/ci-1                       ]   | Image tag: release-1.0.0
+[ci/ci-1                       ]   ✅  Success - Main Print image metadata [476.505881ms]
+[ci/ci-2                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=
+[ci/ci-1                       ] ⭐ Run Post Setup Node.js
+[ci/ci-2                       ]   | Node version: 24
+[ci/ci-2                       ]   | Branch: release/1.0.0
+[ci/ci-2                       ]   | Image tag: release-1.0.0
+[ci/ci-2                       ]   ✅  Success - Main Print image metadata [410.346699ms]
+[ci/ci-1                       ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/cache-save/index.js] user= workdir=
+[Run Tests/test                ]   |  [32m✓[39m test/app.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 333[2mms[22m[39m
+[Run Tests/test                ]   |      [33m[2m✓[22m[39m GET /health returns ok status [33m 318[2mms[22m[39m
+[ci/ci-2                       ] ⭐ Run Main Build Docker image
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[Run Tests/test                ]   | [2m      Tests [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[Run Tests/test                ]   | [2m   Start at [22m 16:23:12
+[Run Tests/test                ]   | [2m   Duration [22m 1.20s[2m (transform 75ms, setup 0ms, import 436ms, tests 333ms, environment 0ms)[22m
+[Run Tests/test                ]   | 
+[Run Tests/test                ]   | JUNIT report written to /workspaces/cicd-lab/reports/vitest-junit.xml
+[ci/ci-2                       ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/5] user= workdir=
+[Run Tests/test                ]   ✅  Success - Main Run tests [8.038359092s]
+[Run Tests/test                ] ⭐ Run Main Upload test report artifact
+[Run Tests/test                ]   🐳  docker cp src=/home/node/.cache/act/actions-upload-artifact@v7/ dst=/var/run/act/actions/actions-upload-artifact@v7/
+[ci/ci-1                       ]   | (node:118) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[ci/ci-1                       ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[ci/ci-1                       ]   | [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /workspaces/cicd-lab --files-from manifest.txt --use-compress-program zstdmt
+[Run Tests/test                ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-upload-artifact@v7/dist/upload/index.js] user= workdir=
+[Run Tests/test                ]   | With the provided path, there will be 1 file uploaded
+[Run Tests/test                ]   | Artifact name is valid!
+[Run Tests/test                ]   | Root directory input is valid!
+[Run Tests/test                ]   ❗  ::error::Unable to get the ACTIONS_RUNTIME_TOKEN env variable
+[Run Tests/test                ]   ❌  Failure - Main Upload test report artifact [6.004785635s]
+[Run Tests/test                ] exitcode '1': failure
+[Run Tests/test                ] ⭐ Run Complete job
+[Run Tests/test                ]   ✅  Success - Complete job
+[Run Tests/test                ] 🏁  Job failed
+[CI Lab/ci                     ] ⭐ Run Set up job
+[CI Lab/ci                     ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[CI Lab/ci                     ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[CI Lab/ci                     ] using DockerAuthConfig authentication for docker pull
+[ci/ci-1                       ]   | Cache Size: ~44 MB (46393548 B)
+[ci/ci-2                       ]   | #0 building with "default" instance using docker driver
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #1 [internal] load build definition from Dockerfile
+[ci/ci-2                       ]   | #1 transferring dockerfile: 398B done
+[ci/ci-2                       ]   | #1 DONE 0.0s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #2 [internal] load metadata for docker.io/library/node:24-alpine
+[ci/ci-1                       ]   | Cache saved successfully
+[ci/ci-1                       ]   | Cache saved with the key: node-cache-Linux-x64-npm-59a0006d34d2a202efa173b36afa9ce7b5184423dee6684b10acf6213002aa75
+[ci/ci-1                       ]   ✅  Success - Post Setup Node.js [7.981833426s]
+[ci/ci-1                       ] ⭐ Run Complete job
+[ci/ci-1                       ] Cleaning up container for job ci
+[ci/ci-2                       ]   | #2 DONE 1.2s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #3 [internal] load .dockerignore
+[ci/ci-2                       ]   | #3 transferring context: 2B done
+[ci/ci-2                       ]   | #3 DONE 0.1s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #4 [builder 1/7] FROM docker.io/library/node:24-alpine@sha256:2bdb65ed1dab192432bc31c95f94155ca5ad7fc1392fb7eb7526ab682fa5bf14
+[ci/ci-2                       ]   | #4 resolve docker.io/library/node:24-alpine@sha256:2bdb65ed1dab192432bc31c95f94155ca5ad7fc1392fb7eb7526ab682fa5bf14 0.1s done
+[ci/ci-2                       ]   | #4 DONE 0.1s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #5 [internal] load build context
+[ci/ci-2                       ]   | #5 transferring context: 148.67kB 0.2s done
+[ci/ci-2                       ]   | #5 DONE 0.5s
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #6 [builder 3/7] COPY package*.json ./
+[ci/ci-2                       ]   | #6 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #7 [builder 4/7] RUN npm install
+[ci/ci-2                       ]   | #7 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #8 [builder 5/7] COPY tsconfig.json ./
+[ci/ci-2                       ]   | #8 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #9 [builder 6/7] COPY src ./src
+[ci/ci-2                       ]   | #9 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #10 [runtime 4/5] RUN npm install --omit=dev
+[ci/ci-2                       ]   | #10 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #11 [builder 7/7] RUN npm run build
+[ci/ci-2                       ]   | #11 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #12 [builder 2/7] WORKDIR /app
+[ci/ci-2                       ]   | #12 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #13 [runtime 5/5] COPY --from=builder /app/dist ./dist
+[ci/ci-2                       ]   | #13 CACHED
+[ci/ci-2                       ]   | 
+[ci/ci-2                       ]   | #14 exporting to image
+[ci/ci-2                       ]   | #14 exporting layers done
+[ci/ci-2                       ]   | #14 exporting manifest sha256:681d5746033e4284b73a71acd43ad2009c9dba4526cac0fadc4204b7964ab930 done
+[ci/ci-2                       ]   | #14 exporting config sha256:43525da9abd065f3aa47857668b21b7e847e5a198213c95bdbc9fe9a3c4606ec done
+[ci/ci-2                       ]   | #14 exporting attestation manifest sha256:3ea52547b168e7cef0f30c1ab3022917fc684963d58523c72095e571db4c5b86
+[ci/ci-2                       ]   | #14 exporting attestation manifest sha256:3ea52547b168e7cef0f30c1ab3022917fc684963d58523c72095e571db4c5b86 0.2s done
+[ci/ci-2                       ]   | #14 exporting manifest list sha256:53d4f37de66efcb1cc21dbbf3f0b0a5b163f12dcd49972e84fdc3e572199c5a3 0.0s done
+[ci/ci-2                       ]   | #14 naming to docker.io/library/my-app:release-1.0.0 done
+[ci/ci-2                       ]   | #14 unpacking to docker.io/library/my-app:release-1.0.0
+[ci/ci-1                       ]   ✅  Success - Complete job
+[ci/ci-1                       ] 🏁  Job succeeded
+[ci/ci-2                       ]   | #14 unpacking to docker.io/library/my-app:release-1.0.0 1.4s done
+[ci/ci-2                       ]   | #14 DONE 2.2s
+[ci/ci-2                       ]   ✅  Success - Main Build Docker image [12.153254647s]
+[CI Lab/ci                     ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[ci/ci-2                       ] ⭐ Run Post Setup Node.js
+[ci/ci-2                       ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/cache-save/index.js] user= workdir=
+[ci/ci-2                       ]   | (node:159) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[ci/ci-2                       ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[ci/ci-2                       ]   | [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /workspaces/cicd-lab --files-from manifest.txt --use-compress-program zstdmt
+[CI Lab/ci                     ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[ci/ci-2                       ]   | Cache Size: ~43 MB (45217947 B)
+[CI Lab/ci                     ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[ci/ci-2                       ]   | Cache saved successfully
+[ci/ci-2                       ]   | Cache saved with the key: node-cache-Linux-x64-npm-59a0006d34d2a202efa173b36afa9ce7b5184423dee6684b10acf6213002aa75
+[ci/ci-2                       ]   ✅  Success - Post Setup Node.js [1.608648935s]
+[ci/ci-2                       ] ⭐ Run Complete job
+[ci/ci-2                       ] Cleaning up container for job ci
+[CI Lab/ci                     ]   ✅  Success - Set up job
+[CI Lab/ci                     ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v5
+[CI Lab/ci                     ] Non-terminating error while running 'git clone': some refs were not updated
+[CI Lab/ci                     ]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v4
+[ci/ci-2                       ]   ✅  Success - Complete job
+[ci/ci-2                       ] 🏁  Job succeeded
+[CI Lab/ci                     ]   ☁  git clone 'https://github.com/dorny/test-reporter' # ref=v1
+[CI Lab/ci                     ] 🧪  Matrix: map[node-version:22]
+[CI Lab/ci                     ] ⭐ Run Main Checkout
+[CI Lab/ci                     ]   🐳  docker cp src=/workspaces/cicd-lab/. dst=/workspaces/cicd-lab
+[CI Lab/ci                     ]   ✅  Success - Main Checkout [174.624216ms]
+[CI Lab/ci                     ] ⭐ Run Main Setup Node.js
+[CI Lab/ci                     ]   🐳  docker cp src=/home/node/.cache/act/actions-setup-node@v5/ dst=/var/run/act/actions/actions-setup-node@v5/
+[CI Lab/ci                     ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-setup-node@v5/dist/setup/index.js] user= workdir=
+[CI Lab/ci                     ]   | Found in cache @ /opt/hostedtoolcache/node/22.22.3/x64
+[CI Lab/ci                     ]   | (node:29) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[CI Lab/ci                     ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[CI Lab/ci                     ]   ❓  ::group::Environment details
+[CI Lab/ci                     ]   | node: v22.22.3
+[CI Lab/ci                     ]   | npm: 10.9.8
+[CI Lab/ci                     ]   | yarn: 
+[CI Lab/ci                     ]   ❓  ::endgroup::
+[CI Lab/ci                     ]   | [command]/opt/hostedtoolcache/node/22.22.3/x64/bin/npm config get cache
+[CI Lab/ci                     ]   | /root/.npm
+[CI Lab/ci                     ]   ⚙  ***
+[CI Lab/ci                     ]   | Cache Size: ~43 MB (45217947 B)
+[CI Lab/ci                     ]   | [command]/usr/bin/tar -xf /tmp/40244102-6b0b-41b1-9caf-58bb9c504ca4/cache.tzst -P -C /workspaces/cicd-lab --use-compress-program unzstd
+[CI Lab/ci                     ]   | Cache restored successfully
+[CI Lab/ci                     ]   | Cache restored from key: node-cache-linux-x64-npm-59a0006d34d2a202efa173b36afa9ce7b5184423dee6684b10acf6213002aa75
+[CI Lab/ci                     ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/tsc.json
+[CI Lab/ci                     ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-stylish.json
+[CI Lab/ci                     ]   ❓ add-matcher /run/act/actions/actions-setup-node@v5/.github/eslint-compact.json
+[CI Lab/ci                     ]   ✅  Success - Main Setup Node.js [2.327281627s]
+[CI Lab/ci                     ]   ⚙  ::set-output:: node-version=v22.22.3
+[CI Lab/ci                     ]   ⚙  ::set-output:: cache-hit=true
+[CI Lab/ci                     ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/22.22.3/x64/bin
+[CI Lab/ci                     ] ⭐ Run Main Install dependencies
+[CI Lab/ci                     ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[CI Lab/ci                     ]   | npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[CI Lab/ci                     ]   | npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[CI Lab/ci                     ]   | npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[CI Lab/ci                     ]   | npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[CI Lab/ci                     ]   | npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[CI Lab/ci                     ]   | npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | added 228 packages, and audited 229 packages in 4s
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | 75 packages are looking for funding
+[CI Lab/ci                     ]   |   run `npm fund` for details
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | 2 vulnerabilities (1 moderate, 1 high)
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | To address all issues, run:
+[CI Lab/ci                     ]   |   npm audit fix
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | Run `npm audit` for details.
+[CI Lab/ci                     ]   ✅  Success - Main Install dependencies [3.804060012s]
+[CI Lab/ci                     ] ⭐ Run Main TypeScript type check
+[CI Lab/ci                     ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | > my-app@1.0.0 typecheck
+[CI Lab/ci                     ]   | > tsc --noEmit
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   ✅  Success - Main TypeScript type check [4.655326958s]
+[CI Lab/ci                     ] ⭐ Run Main Prettier format check
+[CI Lab/ci                     ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | > my-app@1.0.0 format:check
+[CI Lab/ci                     ]   | > prettier --check .
+[CI Lab/ci                     ]   | 
+[CI Lab/ci                     ]   | Checking formatting...
+[CI Lab/ci                     ]   | [[33mwarn[39m] .github/workflows/01_hello.yaml
+[CI Lab/ci                     ]   | [[33mwarn[39m] .github/workflows/02_run-test.yaml
+[CI Lab/ci                     ]   | [[33mwarn[39m] docker-compose.yml
+[CI Lab/ci                     ]   | [[33mwarn[39m] snippets/01_hello.yaml
+[CI Lab/ci                     ]   | [[33mwarn[39m] snippets/02_run-test.yaml
+[CI Lab/ci                     ]   | [[33mwarn[39m] Code style issues found in 5 files. Run Prettier with --write to fix.
+[CI Lab/ci                     ]   ❌  Failure - Main Prettier format check [924.960028ms]
+[CI Lab/ci                     ] exitcode '1': failure
+[CI Lab/ci                     ] ⭐ Run Main Upload test report artifact
+[CI Lab/ci                     ]   🐳  docker cp src=/home/node/.cache/act/actions-upload-artifact@v4/ dst=/var/run/act/actions/actions-upload-artifact@v4/
+[CI Lab/ci                     ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-upload-artifact@v4/dist/upload/index.js] user= workdir=
+[CI Lab/ci                     ]   | (node:159) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+[CI Lab/ci                     ]   | (Use `node --trace-deprecation ...` to show where the warning was created)
+[CI Lab/ci                     ]   🚧  ::warning::No files were found with the provided path: reports/vitest-junit.xml. No artifacts will be uploaded.
+[CI Lab/ci                     ]   ✅  Success - Main Upload test report artifact [2.26326642s]
+[CI Lab/ci                     ] ⭐ Run Main Publish test results to Checks
+[CI Lab/ci                     ]   🐳  docker cp src=/home/node/.cache/act/dorny-test-reporter@v1/ dst=/var/run/act/actions/dorny-test-reporter@v1/
+[CI Lab/ci                     ]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/dorny-test-reporter@v1/dist/index.js] user= workdir=
+[CI Lab/ci                     ]   | Check runs will be created with SHA=aac2673d3bbff9993a42002bf4b5c3c989d80152
+[CI Lab/ci                     ]   ❓  ::group::Listing all files tracked by git
+[CI Lab/ci                     ]   | [command]/usr/bin/git ls-files -z
+[CI Lab/ci                     ]   | .actrc .devcontainer/devcontainer.json .devcontainer/scripts/post-create.sh .eslintrc.cjs .github/workflows/.gitkeep .github/workflows/01_hello.yaml .github/workflows/02_run-test.yaml .gitignore .prettierignore .prettierrc Dockerfile README.md docker-compose.yml package-lock.json package.json snippets/01_hello.yaml snippets/02_run-test.yaml snippets/cd.yaml snippets/ci.yaml src/app.ts src/server.ts test/app.test.ts tsconfig.json vitest.config.ts 
+[CI Lab/ci                     ]   ❓  ::endgroup::
+[CI Lab/ci                     ]   | Found 24 files tracked by GitHub
+[CI Lab/ci                     ]   | Using test report parser 'junit'
+[CI Lab/ci                     ]   ❗  ::error::Error: Input variable 'reporter' is set to invalid value 'junit'
+[CI Lab/ci                     ]   ❌  Failure - Main Publish test results to Checks [1.112482673s]
+[CI Lab/ci                     ] exitcode '1': failure
+[CI Lab/ci                     ] ⭐ Run Complete job
+[CI Lab/ci                     ]   ✅  Success - Complete job
+[CI Lab/ci                     ] 🏁  Job failed
+[cd/cd/deploy] ⭐ Run Set up job
+[cd/cd/deploy] 🚀  Start image=catthehacker/ubuntu:act-latest
+[cd/cd/deploy]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform=linux/amd64 username= forcePull=true
+[cd/cd/deploy] using DockerAuthConfig authentication for docker pull
+[cd/cd/deploy]   🐳  docker create image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[cd/cd/deploy]   🐳  docker run image=catthehacker/ubuntu:act-latest platform=linux/amd64 entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[cd/cd/deploy]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[cd/cd/deploy]   ✅  Success - Set up job
+[cd/cd/deploy]   ☁  git clone 'https://github.com/actions/checkout' # ref=v5
+[cd/cd/deploy] Non-terminating error while running 'git clone': some refs were not updated
+[cd/cd/deploy] ⭐ Run Main Checkout
+[cd/cd/deploy]   🐳  docker cp src=/home/node/.cache/act/actions-checkout@v5/ dst=/var/run/act/actions/actions-checkout@v5/
+[cd/cd/deploy]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-checkout@v5/dist/index.js] user= workdir=
+[cd/cd/deploy]   ❓ add-matcher /run/act/actions/actions-checkout@v5/dist/problem-matcher.json
+[cd/cd/deploy]   | Syncing repository: Lanus311/cicd-lab
+[cd/cd/deploy]   ❓  ::group::Getting Git version info
+[cd/cd/deploy]   | Working directory is '/workspaces/cicd-lab'
+[cd/cd/deploy]   | [command]/usr/bin/git version
+[cd/cd/deploy]   | git version 2.54.0
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   ⚙  ***
+[cd/cd/deploy]   | Temporarily overriding HOME='/tmp/30f8e602-28a2-4350-bcf8-063101aa845a' before making global git config changes
+[cd/cd/deploy]   | Adding repository directory to the temporary git global config as a safe directory
+[cd/cd/deploy]   | [command]/usr/bin/git config --global --add safe.directory /workspaces/cicd-lab
+[cd/cd/deploy]   | Deleting the contents of '/workspaces/cicd-lab'
+[cd/cd/deploy]   ❓  ::group::Initializing the repository
+[cd/cd/deploy]   | [command]/usr/bin/git init /workspaces/cicd-lab
+[cd/cd/deploy]   | hint: Using 'master' as the name for the initial branch. This default branch name
+[cd/cd/deploy]   | hint: will change to "main" in Git 3.0. To configure the initial branch name
+[cd/cd/deploy]   | hint: to use in all of your new repositories, which will suppress this warning,
+[cd/cd/deploy]   | hint: call:
+[cd/cd/deploy]   | hint:
+[cd/cd/deploy]   | hint: 	git config --global init.defaultBranch <name>
+[cd/cd/deploy]   | hint:
+[cd/cd/deploy]   | hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[cd/cd/deploy]   | hint: 'development'. The just-created branch can be renamed via this command:
+[cd/cd/deploy]   | hint:
+[cd/cd/deploy]   | hint: 	git branch -m <name>
+[cd/cd/deploy]   | hint:
+[cd/cd/deploy]   | hint: Disable this message with "git config set advice.defaultBranchName false"
+[cd/cd/deploy]   | Initialized empty Git repository in /workspaces/cicd-lab/.git/
+[cd/cd/deploy]   | [command]/usr/bin/git remote add origin https://github.com/Lanus311/cicd-lab
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   ❓  ::group::Disabling automatic garbage collection
+[cd/cd/deploy]   | [command]/usr/bin/git config --local gc.auto 0
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   ❓  ::group::Setting up auth
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[cd/cd/deploy]   | [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   ❓  ::group::Fetching the repository
+[cd/cd/deploy]   | [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin aac2673d3bbff9993a42002bf4b5c3c989d80152
+[cd/cd/deploy]   | From https://github.com/Lanus311/cicd-lab
+[cd/cd/deploy]   |  * branch            aac2673d3bbff9993a42002bf4b5c3c989d80152 -> FETCH_HEAD
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   ❓  ::group::Determining the checkout info
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   | [command]/usr/bin/git sparse-checkout disable
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+[cd/cd/deploy]   ❓  ::group::Checking out the ref
+[cd/cd/deploy]   | [command]/usr/bin/git checkout --progress --force aac2673d3bbff9993a42002bf4b5c3c989d80152
+[cd/cd/deploy]   | Note: switching to 'aac2673d3bbff9993a42002bf4b5c3c989d80152'.
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | You are in 'detached HEAD' state. You can look around, make experimental
+[cd/cd/deploy]   | changes and commit them, and you can discard any commits you make in this
+[cd/cd/deploy]   | state without impacting any branches by switching back to a branch.
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | If you want to create a new branch to retain commits you create, you may
+[cd/cd/deploy]   | do so (now or later) by using -c with the switch command. Example:
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   |   git switch -c <new-branch-name>
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | Or undo this operation with:
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   |   git switch -
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | Turn off this advice by setting config variable advice.detachedHead to false
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | HEAD is now at aac2673 ci: add run-test.yaml
+[cd/cd/deploy]   ❓  ::endgroup::
+[cd/cd/deploy]   | [command]/usr/bin/git log -1 --format=%H
+[cd/cd/deploy]   | aac2673d3bbff9993a42002bf4b5c3c989d80152
+[cd/cd/deploy]   ❓  ::remove-matcher owner=checkout-git::
+[cd/cd/deploy]   ✅  Success - Main Checkout [2.262513228s]
+[cd/cd/deploy]   ⚙  ::set-output:: commit=aac2673d3bbff9993a42002bf4b5c3c989d80152
+[cd/cd/deploy]   ⚙  ::set-output:: ref=
+[cd/cd/deploy] ⭐ Run Main Compute release image tag
+[cd/cd/deploy]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/meta] user= workdir=
+[cd/cd/deploy]   ✅  Success - Main Compute release image tag [90.36365ms]
+[cd/cd/deploy]   ⚙  ::set-output:: image_tag=release-1.0.0
+[cd/cd/deploy] ⭐ Run Main Build and deploy with Docker Compose
+[cd/cd/deploy]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+[cd/cd/deploy]   |  Image my-app:release-1.0.0 Building 
+[cd/cd/deploy]   | #1 [internal] load local bake definitions
+[cd/cd/deploy]   | #1 reading from stdin 490B done
+[cd/cd/deploy]   | #1 DONE 0.0s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #2 [internal] load build definition from Dockerfile
+[cd/cd/deploy]   | #2 transferring dockerfile:
+[cd/cd/deploy]   | #2 transferring dockerfile: 398B done
+[cd/cd/deploy]   | #2 DONE 0.0s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #3 [internal] load metadata for docker.io/library/node:24-alpine
+[cd/cd/deploy]   | #3 DONE 0.8s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #4 [internal] load .dockerignore
+[cd/cd/deploy]   | #4 transferring context: 2B done
+[cd/cd/deploy]   | #4 DONE 0.0s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #5 [builder 1/7] FROM docker.io/library/node:24-alpine@sha256:2bdb65ed1dab192432bc31c95f94155ca5ad7fc1392fb7eb7526ab682fa5bf14
+[cd/cd/deploy]   | #5 resolve docker.io/library/node:24-alpine@sha256:2bdb65ed1dab192432bc31c95f94155ca5ad7fc1392fb7eb7526ab682fa5bf14 0.0s done
+[cd/cd/deploy]   | #5 DONE 0.0s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #6 [internal] load build context
+[cd/cd/deploy]   | #6 transferring context: 148.67kB done
+[cd/cd/deploy]   | #6 DONE 0.0s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #7 [builder 7/7] RUN npm run build
+[cd/cd/deploy]   | #7 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #8 [builder 2/7] WORKDIR /app
+[cd/cd/deploy]   | #8 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #9 [builder 3/7] COPY package*.json ./
+[cd/cd/deploy]   | #9 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #10 [runtime 4/5] RUN npm install --omit=dev
+[cd/cd/deploy]   | #10 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #11 [builder 4/7] RUN npm install
+[cd/cd/deploy]   | #11 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #12 [builder 5/7] COPY tsconfig.json ./
+[cd/cd/deploy]   | #12 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #13 [builder 6/7] COPY src ./src
+[cd/cd/deploy]   | #13 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #14 [runtime 5/5] COPY --from=builder /app/dist ./dist
+[cd/cd/deploy]   | #14 CACHED
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #15 exporting to image
+[cd/cd/deploy]   | #15 exporting layers
+[cd/cd/deploy]   | #15 exporting layers done
+[cd/cd/deploy]   | #15 exporting manifest sha256:b2861258610e07a373c2c54c57e827c81b70dd54f74a28ef9b743b17f6f04036 0.0s done
+[cd/cd/deploy]   | #15 exporting config sha256:e2a3071908a6e0a46bde865f1156d0a81418c424b38054234ef5600513cd3a68 done
+[cd/cd/deploy]   | #15 exporting attestation manifest sha256:7a5b351ffe8285ea4f7079fb2af9af4c2eb5ffa6a23e4426b6409299503cef9a 0.0s done
+[cd/cd/deploy]   | #15 exporting manifest list sha256:f27f17e0d0f2d55f47e509664cf226515f978fcf7b84c9d5521c89a66a263e56 0.0s done
+[cd/cd/deploy]   | #15 naming to docker.io/library/my-app:release-1.0.0 done
+[cd/cd/deploy]   | #15 unpacking to docker.io/library/my-app:release-1.0.0 done
+[cd/cd/deploy]   | #15 DONE 0.1s
+[cd/cd/deploy]   | 
+[cd/cd/deploy]   | #16 resolving provenance for metadata file
+[cd/cd/deploy]   | #16 DONE 0.0s
+[cd/cd/deploy]   |  Image my-app:release-1.0.0 Built 
+[cd/cd/deploy]   |  Container cicd-lab-app Recreate 
+[cd/cd/deploy]   |  Container cicd-lab-app Recreated 
+[cd/cd/deploy]   |  Container cicd-lab-app Starting 
+[cd/cd/deploy]   |  Container cicd-lab-app Started 
+[cd/cd/deploy]   ✅  Success - Main Build and deploy with Docker Compose [12.71241787s]
+[cd/cd/deploy] ⭐ Run Main Verify health endpoint
+[cd/cd/deploy]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=
+[cd/cd/deploy]   | curl: (56) Recv failure: Connection reset by peer
+[cd/cd/deploy]   ✅  Success - Main Verify health endpoint [2.175223893s]
+[cd/cd/deploy] ⭐ Run Main Show compose status
+[cd/cd/deploy]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=
+[cd/cd/deploy]   | NAME           IMAGE                  COMMAND                  SERVICE   CREATED          STATUS         PORTS
+[cd/cd/deploy]   | cicd-lab-app   my-app:release-1.0.0   "docker-entrypoint.s…"   app       13 seconds ago   Up 2 seconds   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+[cd/cd/deploy]   ✅  Success - Main Show compose status [147.892929ms]
+[cd/cd/deploy] ⭐ Run Post Checkout
+[cd/cd/deploy]   🐳  docker exec cmd=[/opt/acttoolcache/node/24.15.0/x64/bin/node /var/run/act/actions/actions-checkout@v5/dist/index.js] user= workdir=
+[cd/cd/deploy]   | [command]/usr/bin/git version
+[cd/cd/deploy]   | git version 2.54.0
+[cd/cd/deploy]   ⚙  ***
+[cd/cd/deploy]   | Temporarily overriding HOME='/tmp/69adf31d-a70b-42f2-a62a-62e9b8f859fb' before making global git config changes
+[cd/cd/deploy]   | Adding repository directory to the temporary git global config as a safe directory
+[cd/cd/deploy]   | [command]/usr/bin/git config --global --add safe.directory /workspaces/cicd-lab
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[cd/cd/deploy]   | http.https://github.com/.extraheader
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[cd/cd/deploy]   | [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+[cd/cd/deploy]   | [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[cd/cd/deploy]   ✅  Success - Post Checkout [340.651366ms]
+[cd/cd/deploy] ⭐ Run Complete job
+[cd/cd/deploy] Cleaning up container for job deploy
+[cd/cd/deploy]   ✅  Success - Complete job
+[cd/cd/deploy] 🏁  Job succeeded
+Error: Job 'test' failed
