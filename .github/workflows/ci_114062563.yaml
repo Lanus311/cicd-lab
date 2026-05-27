@@ -1,4 +1,4 @@
-name: CI 114062563
+name: ci pipeline for 114062563
 
 on:
   push:
@@ -38,23 +38,17 @@ jobs:
       - name: TypeScript type check
         run: npm run typecheck
 
+      - name: ESLint Check
+        run: npm run lint
+
       - name: Prettier format check
         run: npm run format:check
-      - name: Run tests (produce JUnit)
-        run: |
-          mkdir -p reports
-          npm test -- --reporter=junit --outputFile.junit=reports/vitest-junit.xml
 
-      - name: Upload test report artifact
-        if: always()
+      - name: Run Tests
+        run: npm test -- --coverage --reporter=verbose
+
+      - name: Upload Test Coverage
         uses: actions/upload-artifact@v4
         with:
-          name: vitest-junit
-          path: reports/vitest-junit.xml
-
-      - name: Publish test results (checks)
-        if: always()
-        uses: dorny/test-reporter@v1
-        with:
-          name: vitest
-          path: reports/vitest-junit.xml
+          name: test-coverage-report
+          path: coverage
