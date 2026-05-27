@@ -26,7 +26,7 @@ describe('Fastify app', () => {
     await app.close();
   });
 
-  it("fail test", () => {
+  it('fail test', () => {
     expect(1).toBe(2);
   });
 });
